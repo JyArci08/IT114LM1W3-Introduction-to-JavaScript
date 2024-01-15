@@ -54,7 +54,7 @@ while (list[i]) {
     i++;
 }
 
-// Checkpoint 2.3 How would you simulate a do-while loop in JavaScript
+// Checkpoint 2.3 What is the difference between do while and while loop?
 // Answer: 
 
 // TODO 2.7 Use a for of loop to display all the values in the list
@@ -78,5 +78,12 @@ for (const i in list) {
 const numerator = Math.floor((Math.random() * 100) + 1);
 const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
 
-const quotient = numerator / denominator;
+
+if(denominator === 0){
+    throw new Error("Division by zero error")
+} else {
+    console.log(numerator / denominator);
+}
+
+
 
