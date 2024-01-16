@@ -50,3 +50,5 @@ const concatenatedString = words.reduce(function (accumulator, currentWord) {
 // Answer: Basically, map transforms each element in an array using a provided function, generating a new array.
 // Filter creates a new array by selectively including elements based on a specified condition. 
 // Reduce iterates over array elements, accumulating a single result using a combining function. 
+
+//Done in all guided exercises
