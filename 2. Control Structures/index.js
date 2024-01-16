@@ -55,34 +55,47 @@ while (list[i]) {
 }
 
 // Checkpoint 2.3 What is the difference between do while and while loop?
-// Answer: 
+// The main difference between a do-while and a while loop is that the do-while loop ensures the code block is executed 
+// at least once, as the condition is checked after the loop
+// In contrast, a while loop checks the condition first, and if false initially, the loop may not execute at all
 
 // TODO 2.7 Use a for of loop to display all the values in the list
-for (const i in list) {
-    console.log(list[i]);
-  }
-
+for (let fruits of list) {
+    console.log(fruits);
+}
 // TODO 2.8 Use a for in loop to display all the values in the list
-for (const i in list) {
-    console.log(list[i]);
-  }
-
+for (let fruits in list) {
+    console.log(list[fruits]);
+}
 // TODO 2.9 Use the for each method of the list to display all its values 
-// Your code here
+list.forEach((fruit) => console.log(fruit));
 
 // Checkpoint 2.2 When should you use for of, for in, or .forEach loops? Try researching the answer
-// Answer: 
+
+// for of: Used when you need to iterate over the values of an iterable object, such as an array or'
+// a string, and you want a concise syntax for accessing each element sequentially without dealing with indices
+
+// for in: Used when you need to iterate over the enumerable properties of an object, particularly useful for 
+// working with objects, but be cautious when using it with arrays due to potential issues with order and inclusion
+// of prototype properties
+
+// forEach: Used  when working specifically with arrays, and you want to perform a specific operation on each element,
+// providing a clean and readable syntax for such array-related tasks
 
 // TODO 2.10 Use the try and catch block to catch division by zero errors in the code below.
 // In the finally block, simulate cleaning up resources by displaying "cleaning up resources"
-const numerator = Math.floor((Math.random() * 100) + 1);
-const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
+try {
+    const numerator = Math.floor((Math.random() * 100) + 1);
+    const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
 
-
-if(denominator === 0){
-    throw new Error("Division by zero error")
-} else {
-    console.log(numerator / denominator);
+    if (denominator === 0) throw new Error("Division by zero error");
+    else console.log(numerator / denominator);
+}
+catch (ZeroDivisionError) {
+    console.log("Zero Division Error");
+}
+finally {
+    console.log("Cleaning up resources")
 }
 
 
